@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/appleboy/com/random"
+	"github.com/mastercodercat/com/random"
 )
 
 func main() {

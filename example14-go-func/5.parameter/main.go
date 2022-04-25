@@ -41,15 +41,15 @@ func getUserListOptsSQL(opts searchOpts) string {
 }
 
 func main() {
-	fmt.Println(getUserListSQL("appleboy", ""))
-	fmt.Println(getUserListSQL("appleboy", "appleboy.tw@gmail.com"))
+	fmt.Println(getUserListSQL("mastercodercat", ""))
+	fmt.Println(getUserListSQL("mastercodercat", "mastercodercat.tw@gmail.com"))
 
 	fmt.Println(getUserListOptsSQL(searchOpts{
-		username: "appleboy",
+		username: "mastercodercat",
 	}))
 
 	fmt.Println(getUserListOptsSQL(searchOpts{
-		username: "appleboy",
+		username: "mastercodercat",
 		email:    "test@gmail.com",
 	}))
 }

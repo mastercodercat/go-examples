@@ -79,12 +79,12 @@ See the drone config:
 ```yaml
 docker_golang:
   image: plugins/docker:17.12
-  secrets: [ docker_username, docker_password ]
-  repo: appleboy/golang-http
+  secrets: [docker_username, docker_password]
+  repo: mastercodercat/golang-http
   dockerfile: example19-deploy-with-kubernetes/Dockerfile
   default_tags: true
   when:
-    event: [ push, tag ]
+    event: [push, tag]
 ```
 
 ## rolling update using kubernetes
@@ -102,7 +102,7 @@ deploy:
   image: sh4d1/drone-kubernetes
   kubernetes_template: example19-deploy-with-kubernetes/deployment.yml
   kubernetes_namespace: default
-  secrets: [ kubernetes_server, kubernetes_cert, kubernetes_token ]
+  secrets: [kubernetes_server, kubernetes_cert, kubernetes_token]
 ```
 
 see the `deployment.yaml`
@@ -139,16 +139,16 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: go-hello
-        image: appleboy/golang-http:VERSION
-        imagePullPolicy: Always
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        ports:
-        - containerPort: 8080
-        env:
-        - name: FOR_GODS_SAKE_PLEASE_REDEPLOY
-          value: 'THIS_STRING_IS_REPLACED_DURING_BUILD'
+        - name: go-hello
+          image: mastercodercat/golang-http:VERSION
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - containerPort: 8080
+          env:
+            - name: FOR_GODS_SAKE_PLEASE_REDEPLOY
+              value: 'THIS_STRING_IS_REPLACED_DURING_BUILD'
 ```

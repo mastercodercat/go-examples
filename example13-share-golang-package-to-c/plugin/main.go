@@ -19,5 +19,5 @@ func main() {
 	// what data type or function signature you are trying
 	// to use, type assertions must be used.
 	sayHello := sayHelloSymbol.(func(string))
-	sayHello("appleboy")
+	sayHello("mastercodercat")
 }

@@ -1,4 +1,4 @@
-module github.com/appleboy/dotenv
+module github.com/mastercodercat/dotenv
 
 go 1.12
 

@@ -3,7 +3,7 @@ package main
 import "testing"
 
 func TestIsMyError(t *testing.T) {
-	err := ErrUserNameExist{UserName: "appleboy"}
+	err := ErrUserNameExist{UserName: "mastercodercat"}
 
 	ok := IsErrUserNameExist(err)
 

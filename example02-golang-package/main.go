@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	fmt.Println("一天就學會 Go 語言")
+	fmt.Println("Hello World")
 
-	hi := controller.HelloWorld("appleboy")
+	hi := controller.HelloWorld("mastercodercat")
 	fmt.Println(hi)
 }

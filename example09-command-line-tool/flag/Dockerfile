@@ -1,6 +1,6 @@
 FROM plugins/base:multiarch
 
-LABEL maintainer="Bo-Yi Wu <appleboy.tw@gmail.com>"
+LABEL maintainer="Bo-Yi Wu <mastercodercat.tw@gmail.com>"
 
 ADD server /bin/
 

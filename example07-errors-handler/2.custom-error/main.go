@@ -5,7 +5,7 @@ import (
 )
 
 func checkUserNameExist(username string) (bool, error) {
-	if username == "appleboy" {
+	if username == "mastercodercat" {
 		return true, ErrUserNameExist{UserName: username}
 	}
 
@@ -17,13 +17,13 @@ func main() {
 		fmt.Println("foo not exist")
 	}
 
-	if _, err := checkUserNameExist("appleboy"); err != nil {
+	if _, err := checkUserNameExist("mastercodercat"); err != nil {
 		fmt.Println(err.Error())
 	}
 
-	if _, err := checkUserNameExist("appleboy"); err != nil {
+	if _, err := checkUserNameExist("mastercodercat"); err != nil {
 		if ok := IsErrUserNameExist(err); ok {
-			fmt.Println("user appleboy already exist.")
+			fmt.Println("user mastercodercat already exist.")
 		}
 	}
 }

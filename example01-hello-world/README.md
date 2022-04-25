@@ -5,8 +5,8 @@
 Try to fix `main.go` file using `gofmt` command and show diff data from `gofmt -d example01` command.
 
 ```diff
-        fmt.Printf(HelloWorld("appleboy"))
-        fmt.Println("一天就學會 Go 語言")
+        fmt.Printf(HelloWorld("mastercodercat"))
+        fmt.Println("Hello World")
 
 -       if (a >= 1) { fmt.Println("a >= 1") }
 +       if a >= 1 {
